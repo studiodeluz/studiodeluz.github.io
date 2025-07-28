@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Studio DeLuz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="js/lang.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Studio DeLuz</h1>
+    <img src="images/logo.png" alt="Studio DeLuz Logo" class="logo"/>
     <nav>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#about" data-key="about">About</a></li>
+        <li><a href="#gallery" data-key="gallery">Gallery</a></li>
+        <li><a href="#contact" data-key="contact">Contact</a></li>
+      </ul>
     </nav>
+    <div class="lang-switch">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('pl')">PL</button>
+      <button onclick="setLang('ua')">UA</button>
+    </div>
   </header>
-  <section id="about">
-    <h2>About the Brand</h2>
-    <p>Studio DeLuz is a European art label creating neuroabstract designs for wearable culture.</p>
-  </section>
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <p>Instagram gallery goes here</p>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:studiodeluz2025@gmail.com">studiodeluz2025@gmail.com</a></p>
-  </section>
+
+  <main>
+    <section id="about">
+      <h2 data-key="brand_title">About the Brand</h2>
+      <p data-key="brand_text">
+        Studio DeLuz is a European art label creating emotionally resonant neuroabstract designs for wearable culture. Our mission is to make bold, expressive statements through fashion-forward backpacks, posters, and shirts.
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2 data-key="gallery">Gallery</h2>
+      <div class="gallery">
+        <img src="images/insta1.jpg" alt="Design 1"/>
+        <img src="images/insta2.jpg" alt="Design 2"/>
+        <img src="images/etsy1.jpg" alt="Design 3"/>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 data-key="contact">Contact</h2>
+      <p>Email: <a href="mailto:studiodeluz2025@gmail.com">studiodeluz2025@gmail.com</a></p>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2025 Studio DeLuz. All rights reserved.</p>
+    <p>© 2025 Studio DeLuz. All rights reserved.</p>
   </footer>
 </body>
 </html>
